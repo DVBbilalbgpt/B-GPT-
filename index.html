@@ -60,4 +60,56 @@
 <title>Sahibim Bilal Erdoğan Özel</title>
 <meta property="og:title" content="Sahibim Bilal Erdoğan Özel">
 <meta property="og:description" content="Bilal Erdoğan Özel Karargâhı.">
+<div id="acilis-ekrani">
+    <div class="logo-konteyner">
+        <img src="https://i.hizliresim.com/mka34c7.jpg" class="dvb-logo-parlak">
+        <div class="yukleniyor-text">B-GPT X-SERİSİ BAŞLATILIYOR...</div>
+        <div class="yukleme-cubugu"><div class="doluluk"></div></div>
+    </div>
+</div>
+
+<style>
+    /* Açılış Ekranı Tasarımı */
+    #acilis-ekrani {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: #0a0a0a; display: flex; justify-content: center; align-items: center;
+        z-index: 9999; transition: opacity 1s ease;
+    }
+    .logo-konteyner { text-align: center; }
+    .dvb-logo-parlak {
+        width: 120px; height: 120px; border-radius: 50%;
+        border: 3px solid #1E5631; box-shadow: 0 0 30px #1E5631;
+        animation: logo-parla 2s infinite alternate;
+    }
+    .yukleniyor-text {
+        color: #fff; margin-top: 20px; font-family: monospace;
+        letter-spacing: 2px; font-size: 0.9rem;
+    }
+    .yukleme-cubugu {
+        width: 200px; height: 4px; background: #222; margin: 15px auto;
+        border-radius: 10px; overflow: hidden;
+    }
+    .doluluk {
+        width: 0%; height: 100%; background: #1E5631;
+        animation: dol 2.5s forwards;
+    }
+    @keyframes logo-parla { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.1); opacity: 1; } }
+    @keyframes dol { to { width: 100%; } }
+
+    /* Copilot Logosunu ve Mevcut Logoyu Değiştirme */
+    header img, .logo, .copilot-icon { 
+        content: url("https://i.hizliresim.com/mka34c7.jpg") !important;
+        border: 2px solid #1E5631 !important;
+    }
+</style>
+
+<script>
+    // 3 saniye sonra ekranı kaldır
+    setTimeout(function(){
+        document.getElementById('acilis-ekrani').style.opacity = '0';
+        setTimeout(function(){
+            document.getElementById('acilis-ekrani').style.display = 'none';
+        }, 1000);
+    }, 3000);
+</script>
 
