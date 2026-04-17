@@ -155,4 +155,19 @@
     </form>
     <div id="status-msg" style="font-size: 0.8em; margin-top: 10px; color: #fff; opacity: 0.5;">DURUM: BEKLENİYOR...</div>
 </div>
+<script>
+document.getElementById('dvb-contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let msg = document.getElementById('user-message').value;
+    let status = document.getElementById('status-msg');
+    
+    if(msg.trim() !== "") {
+        status.innerText = "> PROTOKOL BAŞLATILIYOR... CEO'YA AKTARILIYOR...";
+        // Mesajı senin WhatsApp hattına yönlendirir
+        setTimeout(() => {
+            window.location.href = "https://wa.me/905XXXXXXXXX?text=" + encodeURIComponent("B-GPT Sisteminden Mesaj Var: " + msg);
+        }, 1000);
+    }
+});
+</script>
 
