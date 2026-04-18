@@ -21,14 +21,26 @@
         .dugme{ background-color: #1E5631; color: white; padding: 15px 40px; text-decoration: none; font-weight: bold; border-radius: 30px; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 5px 15px rgba(30, 86, 49, 0.4); }
         .dugme:hover{ background-color: #2a7a45; }
         .altbilgi{ position: absolute; bottom: 20px; font-size: 0.8rem; color: #444; }
-            /* Mobil Düzenleme */
-    @media (max-width: 600px) {
-        .konteyner { width: 100% !important; padding: 10px; }
-        .logo { width: 100px; height: 100px; }
-        h1 { font-size: 1.2rem; }
-        iframe, #asistan-div, .terminal { width: 100% !important; height: 400px !important; }
-    }
+                body { background-color: #0a0a0a; margin: 0; padding: 0; display: flex; justify-content: center; }
+    .konteyner { text-align: center; width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+    .logo { width: 140px; height: 140px; margin-top: 20px; }
+    h1 { font-size: 1.8rem; margin: 15px 0; color: #fff; }
+    p { color: #888; margin-bottom: 25px; }
+    .dugme { background-color: #1E5631; color: white; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: bold; }
+    .altbilgi { width: 100%; margin-top: 40px; }
 
+    /* Mobil Kurtarma Operasyonu */
+    @media (max-width: 600px) {
+        .logo { width: 110px; height: 110px; }
+        h1 { font-size: 1.3rem; }
+        iframe, #asistan-div, .terminal { 
+            width: 100% !important; 
+            min-height: 480px !important; 
+            display: block !important;
+            margin: 0 auto !important;
+        }
+               }
+                      
     </style>
 </head>
 <body>
