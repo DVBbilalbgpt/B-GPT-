@@ -332,7 +332,26 @@ async function bGptResponse(userText) {
     responseLine.innerText = "B-GPT: ";
     outputArea.appendChild(responseLine);
     
-    let coreData = "Sorgu analiz edildi. Veri tabanı senkronizasyonu bekleniyor. Emirlerinizi bekliyorum Bilal Patron.";
+        // B-GPT CANLI ZEKA MODÜLÜ BAŞLIYOR
+    const API_KEY = "AIzaSyCufQBHXFvCtuv_MlSF4Of4bCNnQzRK-5I";
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+    
+    let coreData = "";
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                contents: [{ parts: [{ text: `Sen Bilal Erdoğan tarafından geliştirilen B-GPT'sin. Çok havalı, kısa ve hacker gibi cevap ver. Kullanıcı hangi dilde yazarsa o dilde cevap ver. Soru: ${userText}` }] }]
+            })
+        });
+        const data = await response.json();
+        coreData = data.candidates[0].content.parts[0].text;
+    } catch (e) {
+        coreData = "ERİŞİM HATASI: SİSTEM ÇEVRİMDIŞI.";
+    }
+    // ZEKA MODÜLÜ BİTTİ, YAZDIRMA BAŞLIYOR
+    
     
     for (let char of coreData) {
         responseLine.innerText += char;
