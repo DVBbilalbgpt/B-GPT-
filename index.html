@@ -289,6 +289,18 @@ html, body {
   gtag('config', 'G-XY2T0RJ1VH');
 </script>
 <script>
+    <script>
+// --- DVB TECHNOLOGIES KORUMA KALKANI BAŞLANGICI ---
+(function() { 
+    // Sağ tık engeli
+    document.addEventListener('contextmenu', e => { e.preventDefault(); alert("DVB TECHNOLOGIES: Erişim Engellendi!"); });
+    // Klavye engeli
+    document.onkeydown = e => { if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false; };
+    // Konsolu temiz tut
+    setInterval(() => console.clear(), 100);
+
+    // --- SENİN KODLARIN BURADAN İTİBAREN DEVAM EDİYOR (HİÇBİR ŞEYİ SİLME) ---
+    
     
 
 // --- DVB TECHNOLOGIES | B-GPT CORE SECURITY PROTOCOL ---
