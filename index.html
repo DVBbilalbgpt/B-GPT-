@@ -289,7 +289,7 @@ html, body {
   gtag('config', 'G-XY2T0RJ1VH');
 </script>
 <script>
-    <script>
+    
 // --- DVB TECHNOLOGIES KORUMA KALKANI BAŞLANGICI ---
 (function() { 
     // Sağ tık engeli
@@ -300,6 +300,26 @@ html, body {
     setInterval(() => console.clear(), 100);
 
     // --- SENİN KODLARIN BURADAN İTİBAREN DEVAM EDİYOR (HİÇBİR ŞEYİ SİLME) ---
+        // --- B-GPT KİMLİK VE ARAYÜZ AYARLARI ---
+    const boss = "Bilal Erdoğan Özel";
+    const brand = "B-GPT";
+
+    // Sayfa yüklendiğinde Copilot'u siler, B-GPT'yi getirir
+    window.addEventListener('DOMContentLoaded', () => {
+        // Üst başlığı değiştirir
+        document.title = brand + " | DVB Technologies";
+        
+        // Karşılama mesajını günceller
+        const welcome = document.querySelector('h1');
+        if (welcome) welcome.innerText = "Hoş geldin! Bugün ne öğrenmek istersin?";
+        
+        // Varsa diğer "Copilot" yazılarını temizler
+        document.body.innerHTML = document.body.innerHTML.replace(/Copilot/g, brand);
+    });
+
+    // Yapay zekanın beynine kazınacak kimlik
+    const bGptIdentity = `Sen ${brand} adlı yapay zekasın. Kurucun ${boss}'dir. Sahibi olduğun şirket DVB TECHNOLOGIES'dir. Sorulursa bunu gururla söyle!`;
+    
     
     
 
