@@ -328,18 +328,7 @@ const _0xAuth = "dvbbilalbgpt.github.io";
 
 window.onload = function() {
     // Güvenlik Duvarı: Lisanssız domain kontrolü
-    if (window.location.hostname !== _0xAuth && window.location.hostname !== "127.0.0.1") {
-        document.body.innerHTML = `
-            <div style="background:#000; color:#ff0000; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:monospace; text-align:center; padding:20px;">
-                <h1 style="border:2px solid #ff0000; padding:20px;">⚠️ CRITICAL SECURITY BREACH</h1>
-                <p style="font-size:1.2rem;">UNAUTHORIZED DOMAIN DETECTED: ACCESS DENIED.</p>
-                <p>This software is protected by DVB Technologies Security Protocols.</p>
-                <p style="color:#555;">Error Code: 0xDB-99 / Unauthorized_Copy</p>
-            </div>`;
-        return;
-    }
-    console.log("B-GPT v1.0: Online. Systems nominal.");
-};
+    
 
 async function bGptResponse(userText) {
     const outputArea = document.getElementById('chat-output'); 
