@@ -127,7 +127,8 @@ html, body {
         
         <p>Kayıt Yok. Sınır Yok. Gelecek Burada.</p>
         <br><br>
-        <a href="https://dvbbilalbgpt.github.io/B-GPT-/index.html" class="dugme">Asistana Bağlan</a>
+        <a href="javascript:void(0)" onclick="connectToAsistan()" class="btn">Asistana Bağlan</a>
+        
     </div>
     <div class="altbilgi">© 2026 DVB Technologies - Bilal Patron</div>
 </body>
@@ -328,20 +329,28 @@ const _0xAuth = "dvbbilalbgpt.github.io";
 
 window.onload = function() {
     // Güvenlik Duvarı: Lisanssız domain kontrolü
-    function connectToAsistan() {
-    // Giriş ekranını (konteyner) gizle
-    const loader = document.querySelector('.konteyner');
-    if(loader) loader.style.display = 'none';
+    window.onload = function() {
+    console.log("DVB Technologies: B-GPT X-SERİSİ Aktif.");
+};
 
-    // Asıl terminali/paneli görünür yap
+function connectToAsistan() {
+    // 1. Giriş ekranını (siyah konteyner) gizle
+    const loader = document.querySelector('.konteyner');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+
+    // 2. Asıl terminal panelini bul ve aç
     const terminal = document.getElementById('bilal-terminal');
-    if(terminal) {
+    if (terminal) {
+        terminal.style.display = 'block';
         terminal.style.visibility = 'visible';
-        terminal.style.display = 'block'; // Garanti olsun diye
     }
-    
-    console.log("B-GPT X-SERİSİ Sisteme Bağlandı. Hoş geldin CEO Bilal!");
-    }
+
+    // 3. Sisteme girişi mühürle
+    console.log("Sisteme giriş yapıldı. SAHİBİM BİLAL ERDOĞAN ÖZEL.");
+}
+
     
     
 
