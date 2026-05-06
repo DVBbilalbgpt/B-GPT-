@@ -328,6 +328,21 @@ const _0xAuth = "dvbbilalbgpt.github.io";
 
 window.onload = function() {
     // Güvenlik Duvarı: Lisanssız domain kontrolü
+    function connectToAsistan() {
+    // Giriş ekranını (konteyner) gizle
+    const loader = document.querySelector('.konteyner');
+    if(loader) loader.style.display = 'none';
+
+    // Asıl terminali/paneli görünür yap
+    const terminal = document.getElementById('bilal-terminal');
+    if(terminal) {
+        terminal.style.visibility = 'visible';
+        terminal.style.display = 'block'; // Garanti olsun diye
+    }
+    
+    console.log("B-GPT X-SERİSİ Sisteme Bağlandı. Hoş geldin CEO Bilal!");
+    }
+    
     
 
 async function bGptResponse(userText) {
