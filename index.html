@@ -18,83 +18,121 @@
 <meta name="author" content="Bilal Erdoğan Özel">
 <meta name="robots" content="index, follow">
   <style>
-    /* --- DVB HACKER CORE: MATRIX MOD --- */
-html, body {
-    background-color: #0a0a0a !important;
-    color: #00ff00 !important;
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    overflow-x: hidden !important;
-}
+        .chat-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .chat-header {
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .chat-header h1 {
+            font-size: 18px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .chat-header span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .chat-output {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-top: 15vh;
+        }
+
+        .welcome-message h2 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #c4c7c5;
+        }
+
+        .user-msg {
+            background: #1e1f20;
+            padding: 12px 18px;
+            border-radius: 18px;
+            align-self: flex-end;
+            max-width: 80%;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .ai-msg {
+            background: transparent;
+            padding: 12px 0;
+            align-self: flex-start;
+            max-width: 90%;
+            color: #e3e3e3;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #131314;
+        }
+
+        .input-box {
+            width: 100%;
+            background-color: #1e1f20;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            border: 1px solid #444746;
+        }
+
+        .input-box input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        .input-box button {
+            background: #a8c7fa;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #040e15;
+        }
+
+        .footer-sign {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+        }
       
-
-.kayan-yazi-bandi {
-    width: 100%;
-    background-color: #1a1a1a;
-    color: #00ff00;
-    padding: 10px 0;
-    border-top: 1px solid #00ff00;
-    border-bottom: 1px solid #00ff00;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-    
-
-/* KAYAN YAZI TASARIMI */
-.kayan-yazi-bandi {
-    width: 100%;
-    background-color: #1a1a1a;
-    color: #00ff00;
-    padding: 10px 0;
-    border-top: 1px solid #00ff00;
-    border-bottom: 1px solid #00ff00;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-
-    
-.konteyner {
-    min-height: 100vh !important;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 80px !important;
-    background-color: #0a0a0a;
-}
-
-@media only screen and (max-width: 600px) {
-    .konteyner { width: 95% !important; margin: 0 auto; }
-    h1 { font-size: 1.8rem !important; margin-top: 15px !important; }
-    p { font-size: 1rem !important; }
-    
-    /* Butonları da Matrix Yeşili Yapalım */
-    .dugme, .asistan-link, a {
-        background-color: #00ff00 !important;
-        color: #0a0a0a !important;
-        padding: 15px 30px !important;
-        text-decoration: none !important;
-        font-weight: bold !important;
-        border-radius: 5px !important;
-        box-shadow: 0 0 15px #00ff00 !important;
-        display: inline-block !important;
-        margin-top: 20px !important;
-    }
-}
-
-/* Alttaki Analytics Yazısı */
-.altbilgi, .footer {
-    width: 100%;
-    margin-top: auto;
-    text-align: center;
-    color: #444;
-    font-size: 0.8rem;
-    padding: 20px 0;
-    border-top: 1px solid #222;
-}
 </style>
     
 
