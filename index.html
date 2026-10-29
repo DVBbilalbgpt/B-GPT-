@@ -120,14 +120,32 @@ html, body {
     </style>
 </head>
 <body>
-    <div class="konteyner">
-        <img src="https://i.hizliresim.com/mka34c7.jpg" class="logo" alt="B-GPT Yapay Zeka - DVB DİGİTAL STUDİOS Resmi Logosu" title="B-GPT X-SERİSİ">
-        
-        <h1>DVB DİGİTAL STUDİOS B-GPT</h1>
-        
-        <p>Kayıt Yok. Sınır Yok. Gelecek Burada.</p>
-        <br><br>
-       <a href="javascript:void(0)" onclick="connectToAsistan()" class="btn">Asistana Bağlan</a>
+        <div class="chat-wrapper">
+        <!-- Üst Minimalist Başlık -->
+        <header class="chat-header">
+            <h1>B-GPT</h1>
+            <span>DVB DİGİTAL STUDİOS</span>
+        </header>
+
+        <!-- Mesajların Akacağı Alan -->
+        <div id="chat-output" class="chat-output">
+            <div class="welcome-message" id="welcome-box">
+                <h2>Sana nasıl yardımcı olabilirim?</h2>
+            </div>
+        </div>
+
+        <!-- Alt Mesaj Yazma Çubuğu -->
+        <div class="chat-input-container">
+            <div class="input-box">
+                <input type="text" id="user-message" placeholder="B-GPT'ye bir şey sor..." autocomplete="off">
+                <button onclick="bGPTGonder()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+            <span class="footer-sign">© 2026 DVB DİGİTAL STUDİOS - Bilal Erdoğan Özel</span>
+        </div>
+    
+    
 
  
 
