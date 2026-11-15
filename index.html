@@ -445,5 +445,19 @@ window.addEventListener('load', () => {
   }, 500);
 })();
     </script>
+    
+<script>
+document.getElementById("attachBtn").onclick = function(e) {
+  e.stopPropagation();
+  const menu = document.getElementById("attachMenu");
+  menu.style.display =
+    menu.style.display === "block" ? "none" : "block";
+};
+
+document.addEventListener("click", function() {
+  document.getElementById("attachMenu").style.display = "none";
+});
+</script>
+    
 </body>
 </html>
